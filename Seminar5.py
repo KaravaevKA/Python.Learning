@@ -59,3 +59,14 @@
 # A = int(input('Введите число А '))
 # B = int(input('Введите число В '))
 # print(PowerNums(A, B))
+
+# Задача 28. 
+
+# def Sum(a,b):
+#     if  b==0:
+#         return a
+#     return (Sum(a,b-1))+1
+
+# x = int(input())
+# y = int(input())
+# print(Sum(x,y))
