@@ -46,3 +46,16 @@
 #         return 1
 #     return Fib(n-2) + Fib(n-1)
 # print(Fib(n))
+
+# Домашнее задание
+
+# Задача 26. Напишите программу, которая на ввод принимает два числа А и В, и возводит число А в степень В
+
+# def PowerNums(A, B):
+#     if B == 0:
+#         return 1
+#     return A*PowerNums(A, B-1)
+    
+# A = int(input('Введите число А '))
+# B = int(input('Введите число В '))
+# print(PowerNums(A, B))
