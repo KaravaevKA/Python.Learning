@@ -75,3 +75,9 @@ def ListFillRandom(list_a):
 #     print(arr)
 #     print(_res(arr))
 
+# a = int(input('Введите первый элемент прогрессии: '))
+# b = int(input('Введите разность прогрессии: '))
+# n = int(input('Введите количество элементов прогрессии: '))
+# for i in range(n):
+#     print(a+i*b)
+
