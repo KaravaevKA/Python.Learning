@@ -81,3 +81,10 @@ def ListFillRandom(list_a):
 # for i in range(n):
 #     print(a+i*b)
 
+# a = int(input())
+# b = int(input())
+# list_1=[-5,9,0,3,-1,-2,1,-4,-2,10,-9,0,-5,-5,7]
+# print(list_1)
+# for i,x in enumerate(list_1):
+#     if b <= x <= a:
+#         print("Индекс", i, "значение" , x)
