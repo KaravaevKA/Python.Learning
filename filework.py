@@ -22,7 +22,7 @@ def Phonebook_edit():
 
 
 def Phonebook_save():
-  file = open('phon copy.txt', encoding = 'utf-8')
+  file = open('phon copy2.txt', encoding = 'utf-8')
   list_1=list()
   for line in file:
     list_1.append(line)
@@ -34,13 +34,13 @@ def Phonebook_save():
 
 def Phonebook_remove_contact():
   find = str(input('Выберите контакт: '))
-  file = open('phon copy.txt', encoding = 'utf-8')
+  file = open('phon copy2.txt', encoding = 'utf-8')
   list_1 = list()
   for line in file:
     if find not in line:
       list_1.append(line)
   file.close()
-  file = open('phon copy.txt', 'w',encoding='utf-8')
+  file = open('phon copy2.txt', 'w',encoding='utf-8')
   for line in list_1:
     file.write(line)
   file.close()
@@ -48,7 +48,7 @@ def Phonebook_remove_contact():
   
 
 def SearchNumber():
-  file = open('phon copy.txt', 'r+', encoding='utf-8')
+  file = open('phon copy2.txt', 'r+', encoding='utf-8')
   list_1=list()
   for line in file:
     list_1.append(line)
@@ -74,24 +74,38 @@ def SearchSurname():
   file.close()
 
 def Phonebook_add():
-  file = open('phon copy.txt', 'a+', encoding='utf-8')
-  surname = str(input('Введите фамилию: '))
-  name = str(input('Введите имя: '))
-  number = str(input('Введите номер: '))
-  description = input('Введите описание: ')
+  file = open('phon copy2.txt', 'a+', encoding='utf-8')
+  # surname = str(input('Введите фамилию: '))
+  # name = str(input('Введите имя: '))
+  # number = str(input('Введите номер: '))
+  # description = input('Введите описание: ')
+  # file.write('\n')
+  # file.write(surname)
+  # file.write('  ')
+  # file.write(name)
+  # file.write('  ')
+  # file.write(number)
+  # file.write('  ')
+  # file.write(description)
+  surname = list()
+  name = list()
+  number = list()
+  description = list()
+  surname.append(str(input('Введите фамилию: ')))
+  name.append(str(input('Введите имя: ')))
+  number.append(str(input('Введите номер: ')))
+  description.append(str(input('Добавьте описание: ')))
+  data = list(*zip(surname, name, number, description))
+  for line in data:
+    file.write((line) + ' ')
+
   file.write('\n')
-  file.write(surname)
-  file.write('  ')
-  file.write(name)
-  file.write('  ')
-  file.write(number)
-  file.write('  ')
-  file.write(description)
+
   file.close() 
   
   
 def PrintPhonebook():
-  file = open('phon copy.txt', 'r', encoding='utf-8')
+  file = open('phon copy2.txt', 'r', encoding='utf-8')
   for line in file:
     print(line)
   file.close()
